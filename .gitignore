@@ -50,16 +50,6 @@ venv.bak/
 .env.local
 .env.*.local
 
-# Data files (large datasets)
-data/raw/*.csv
-data/raw/*.json
-data/raw/*.parquet
-data/processed/*.pkl
-data/processed/*.pickle
-data/processed/*.csv
-data/playlists/*.json
-data/playlists/*.pkl
-
 # Model files (can be large)
 *.model
 *.pkl
