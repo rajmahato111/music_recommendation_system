@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  music-recommender:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
