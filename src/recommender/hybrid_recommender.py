@@ -2,7 +2,7 @@
 Hybrid recommender combining collaborative and audio embeddings with ANN indexing.
 """
 import numpy as np
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Union
 from ..embeddings.hybrid_embeddings import HybridEmbeddings
 from ..retrieval.ann_index import ANNIndex
 from ..data_loader import DataLoader
@@ -11,7 +11,8 @@ from ..data_loader import DataLoader
 class HybridRecommender:
     """Hybrid recommender using fused embeddings and ANN search."""
     
-    def __init__(self, hybrid_embeddings: HybridEmbeddings, ann_index: ANNIndex,
+    def __init__(self, hybrid_embeddings: HybridEmbeddings, 
+                 ann_index: Union[ANNIndex, 'BruteForceIndex'],
                  data_loader: DataLoader):
         """
         Initialize hybrid recommender.

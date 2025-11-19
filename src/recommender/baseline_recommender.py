@@ -34,8 +34,14 @@ class BaselineRecommender:
         # Get numerical features
         numerical_data = self.data_loader.get_all_numerical_features()
         
+        # Convert to numpy array to avoid feature name warnings
+        if isinstance(numerical_data, pd.DataFrame):
+            numerical_array = numerical_data.values
+        else:
+            numerical_array = numerical_data
+        
         # Normalize using Min-Max Scaler
-        self.normalized_data = self.min_max_scaler.fit_transform(numerical_data)
+        self.normalized_data = self.min_max_scaler.fit_transform(numerical_array)
         
         # Standardize the normalized data
         self.scaled_normalized_data = self.standard_scaler.fit_transform(self.normalized_data)

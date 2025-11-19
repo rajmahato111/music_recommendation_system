@@ -77,6 +77,8 @@ logs/
 
 # Streamlit
 .streamlit/
+# But keep config.toml for theme settings
+!.streamlit/config.toml
 
 # Testing
 .pytest_cache/
@@ -113,12 +115,16 @@ Thumbs.db
 # Project specific
 notebooks/.ipynb_checkpoints/
 *.pyc
-src/**/__pycache__/
+**/__pycache__/
+docs/__pycache__/
+
+# Generated visualizations (can be regenerated)
+docs/visualizations/*.html
 
 # Keep data directory structure but ignore contents
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/playlists/.gitkeep
 !results/.gitkeep
-!notebooks/.gitkeep
+!tests/.gitkeep
 
