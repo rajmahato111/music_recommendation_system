@@ -229,10 +229,6 @@ Feel free to contribute by:
 2. Submitting pull requests
 3. Improving documentation
 
-## License
-
-[Add your license here]
-
 ## Acknowledgments
 
 - Spotify for audio feature data
